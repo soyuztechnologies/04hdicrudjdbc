@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "1316efb4-2090-4200-8efe-1d062886f791",
+		"name": "XSUAA Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get OAuth Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "response_type",
+							"value": "token",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://48a2dfcatrial.authentication.eu10.hana.ondemand.com/oauth/token",
+					"protocol": "https",
+					"host": [
+						"48a2dfcatrial",
+						"authentication",
+						"eu10",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data Now",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vNDhhMmRmY2F0cmlhbC5hdXRoZW50aWNhdGlvbi5ldTEwLmhhbmEub25kZW1hbmQuY29tL3Rva2VuX2tleXMiLCJraWQiOiJkZWZhdWx0LWp3dC1rZXktLTE3NzQ0MjYxMjEiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiI3YzQ4ZWFlMWIwZmE0YjBlOGUzZjEzNzhmNjcxNzMyZCIsImV4dF9hdHRyIjp7ImVuaGFuY2VyIjoiWFNVQUEiLCJzdWJhY2NvdW50aWQiOiIyYzI5YTFjNS04OTkwLTQ0YmYtOWE1OC1jNTQwNTdjYjUxNmMiLCJ6ZG4iOiI0OGEyZGZjYXRyaWFsIn0sInhzLnN5c3RlbS5hdHRyaWJ1dGVzIjp7InhzLnJvbGVjb2xsZWN0aW9ucyI6WyJNeUFwcFJvbGVzIiwiU3ViYWNjb3VudCBBZG1pbmlzdHJhdG9yIl19LCJnaXZlbl9uYW1lIjoiQW51YmhhdiIsInhzLnVzZXIuYXR0cmlidXRlcyI6e30sImZhbWlseV9uYW1lIjoiT2Jlcm9pIiwic3ViIjoiNjIzODZjOTctMDFjNi00MTZkLWE1NGItM2U1YzEzNDA5ZmY3Iiwic2NvcGUiOlsiMDRoZGljcnVkamRiYyF0NzczNjYuRWRpdCIsIjA0aGRpY3J1ZGpkYmMhdDc3MzY2LkRpc3BsYXkiLCJvcGVuaWQiLCIwNGhkaWNydWRqZGJjIXQ3NzM2Ni5EZWxldGUiXSwiY2xpZW50X2lkIjoic2ItMDRoZGljcnVkamRiYyF0NzczNjYiLCJjaWQiOiJzYi0wNGhkaWNydWRqZGJjIXQ3NzM2NiIsImF6cCI6InNiLTA0aGRpY3J1ZGpkYmMhdDc3MzY2IiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9pZCI6IjYyMzg2Yzk3LTAxYzYtNDE2ZC1hNTRiLTNlNWMxMzQwOWZmNyIsIm9yaWdpbiI6InNhcC5kZWZhdWx0IiwidXNlcl9uYW1lIjoibW9uZGF5LnVpNUBnbWFpbC5jb20iLCJlbWFpbCI6Im1vbmRheS51aTVAZ21haWwuY29tIiwiYXV0aF90aW1lIjoxNjEzNDY2OTM4LCJyZXZfc2lnIjoiZjMwNmRlMTciLCJpYXQiOjE2MTM0NjY5MzgsImV4cCI6MTYxMzUxMDEzOCwiaXNzIjoiaHR0cHM6Ly80OGEyZGZjYXRyaWFsLmF1dGhlbnRpY2F0aW9uLmV1MTAuaGFuYS5vbmRlbWFuZC5jb20vb2F1dGgvdG9rZW4iLCJ6aWQiOiIyYzI5YTFjNS04OTkwLTQ0YmYtOWE1OC1jNTQwNTdjYjUxNmMiLCJhdWQiOlsib3BlbmlkIiwiMDRoZGljcnVkamRiYyF0NzczNjYiLCJzYi0wNGhkaWNydWRqZGJjIXQ3NzM2NiJdfQ.TefvBkHQmOPIUci7Nxka5N_zHJtp-bXO9ySxuBAP7IlK20YyxPIbjTocYFY735jJtuYlW17QK_gzMAfDkkP_qAThzSUGOdS5FuCnP3YM6wdSqiNEFKo-EwWDCpapPdEruNpvuKJ2Ir9RO6shfmpwoo54d1HgOfvFOBh4XqP21GqFHjwJr7Ovi-9PBG9Rom88W6nHfl-OZEmu-4fLmWa8VaovwlZmvMupiVY9X-671u-rwEgr34_Q2vWi4cfT2RTMM3B8yUPHdQf5DZvthjcZ4st2nAbjpNeYgYayC07UnLKAGv_HpnrJ3qbmQsmqFJS4WGZKvJX3zU9pMela_9z4JQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6\",\r\n    \"firstName\": \"Christiano\",\r\n    \"lastName\": \"Ronaldo\",\r\n    \"companyName\": \"EnY\",\r\n    \"webSite\": \"www.eny.com\",\r\n    \"emailId\": \"demo@sohu.com\",\r\n    \"gstNumber\": \"60-911-5725\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "04hdicrudjdbc-forgiving-pangolin-an.cfapps.eu10.hana.ondemand.com/Vendors/2",
+					"host": [
+						"04hdicrudjdbc-forgiving-pangolin-an",
+						"cfapps",
+						"eu10",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"Vendors",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
